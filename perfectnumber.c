@@ -7,34 +7,68 @@
 * 1 + 2+ 3 = 6
 * Note: 6 is the smallest perfect number
 */
+
+// #include <stdio.h>
+//
+// int main()
+// {
+// int a ;
+// int sum = 0;
+// printf("Please input a number to be evaluated: \n");
+// scanf("%d", &a) ;
+// // start eval
+// for (int i = 1; i < a; i++)
+// {
+//   printf("%d \n", i) ;
+//   if (a % i == 0)
+//   {
+//     printf("This number is in the if loop %d \n", i);
+//     sum = sum + i ;
+//     printf("%d \n", sum);
+//   }
+// }
+//
+// if (a == sum)
+// {
+//   printf("%d is a perfect number \n", a);
+// }
+// else
+// {
+//   printf("This is not a perfect number \n") ;
+// }
+//
+// return 0;
+// }
 #include <stdio.h>
 
 int main()
 {
-int a ;
-int sum = 0;
-printf("Please input a number to be evaluated: \n");
-scanf("%d", &a) ;
-// start eval
-for (int i = 1; i < a; i++)
-{
-  printf("%d \n", i) ;
-  if (a % i == 0)
+  int a ;
+  int b ;
+  //int c ;
+
+  scanf("%d", &a);
+  scanf("%d", &b);
+
+  //int difference = b - a;
+  //int array[difference];
+
+  for (; a<=b; a++)
   {
-    printf("This number is in the if loop %d \n", i);
-    sum = sum + i ;
-    printf("%d \n", sum);
+    int sum = 0;
+    {
+    for (int i = 1; i<a; i++)     // this for loop checks if a is a perfect number
+    {
+      if (a%i == 0)
+      {
+        sum = sum + i;
+      }
+    }
+    if (sum == a)         // this proves that it is a perfect number
+    {
+      printf("%d \n", a);
+    }
+    }
   }
-}
 
-if (a == sum)
-{
-  printf("%d is a perfect number \n", a);
-}
-else
-{
-  printf("This is not a perfect number \n") ;
-}
-
-return 0;
 }
