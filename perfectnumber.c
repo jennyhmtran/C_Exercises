@@ -38,6 +38,3 @@ else
 
 return 0;
 }
-
-// make a program that takes in an input a and determine if the number is
-// a perfect number or not.
